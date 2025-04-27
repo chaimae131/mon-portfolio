@@ -20,10 +20,10 @@ function About() {
         </div>
         {/* ------------------------------------- */}
 
-        <a href="./CV-English.pdf" target="_blank" rel="noopener noreferrer" className="cv-button">
+        <a href="./English.pdf" target="_blank" rel="noopener noreferrer" className="cv-button">
           View My English Resume
         </a>
-        <a href="./CV-Français.pdf" target="_blank" rel="noopener noreferrer" className="cv-button">
+        <a href="./Français.pdf" target="_blank" rel="noopener noreferrer" className="cv-button">
           Voir mon CV en Français
         </a>
       </div>
