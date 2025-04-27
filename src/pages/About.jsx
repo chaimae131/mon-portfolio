@@ -29,7 +29,7 @@ function About() {
       </div>
 
       <div className="about-photo">
-        <img src="./me.jpeg" alt="Chaimae" />
+        <img src="./me.jpeg" alt="chaimae" />
       </div>
     </div>
   );
