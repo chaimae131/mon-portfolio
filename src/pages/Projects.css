@@ -1,0 +1,206 @@
+.portfolio-container {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre tout le contenu horizontalement */
+  cursor: default;
+}
+
+.section-title {
+  color: #1a237e;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  cursor: default;
+}
+
+/* Grid Layout */
+.projects-grid,
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 1200px; /* Ajusté pour mieux centrer */
+  width: 100%;
+  padding: 0;
+  justify-items: center; /* Centre chaque carte dans sa colonne */
+}
+
+/* Project Cards */
+.project-card,
+.certificate-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 500px; /* Largeur fixe */
+  height: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.project-image-container,
+.certificate-image-container {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  cursor: default; 
+}
+
+.project-image,
+.certificate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ⚡ METS l'image en entière sans crop */
+  transition: none; /* Plus de zoom au hover */
+  cursor: default;
+}
+
+/* Plus besoin de zoom */
+.project-card:hover .project-image,
+.certificate-card:hover .certificate-image {
+  transform: none;
+}
+
+/* View Details Button */
+.view-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(137, 137, 137);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer; /* Curseur main SEULEMENT ici */
+}
+
+.project-image-container:hover .view-details {
+  opacity: 1;
+}
+
+.view-details:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Info Text */
+.project-info,
+.certificate-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: default;
+}
+
+.project-title,
+.certificate-title {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  text-align: left;
+  cursor: default;
+}
+
+.project-description {
+  color: #b3b3b3;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  cursor: default;
+}
+
+/* Overlay Effect */
+.project-image-container::after,
+.certificate-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: default;
+}
+
+.project-image-container:hover::after,
+.certificate-image-container:hover::after {
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .projects-grid,
+  .certificates-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid,
+  .certificates-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .project-image-container,
+  .certificate-image-container {
+    height: 250px;
+    width: 100%;
+  }
+}
+
+/* Style pour le séparateur */
+.section-divider {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.divider-line {
+  width: 0; /* Commence à 0% pour l'animation */
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #1a237e, transparent);
+  position: relative;
+  transition: width 1s ease-out; /* Transition pour l'animation de la largeur */
+}
+
+.divider-line::before,
+.divider-line::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #1a237e;
+  border-radius: 50%;
+  transition: opacity 1s ease-out; /* Animation pour les cercles */
+}
+
+.divider-line::before {
+  left: 0;
+}
+
+.divider-line::after {
+  right: 0;
+}
+
+.section-divider:hover .divider-line::before,
+.section-divider:hover .divider-line::after {
+  opacity: 1; /* Les cercles deviennent visibles lorsque la ligne est complètement étendue */
+}

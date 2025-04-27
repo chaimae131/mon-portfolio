@@ -1,0 +1,121 @@
+.about-container { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 50%; /* Réduit la largeur à 50% de la largeur totale */
+  animation: fadeInLeft 1.5s ease forwards;
+}
+
+.cv-button {
+  display: block; /* Chaque bouton sur sa ligne */
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: rgb(97, 96, 96);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  width: fit-content;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: gray; /* Bordure colorée au survol */
+  color: #1a237e; /* Changer la couleur du texte en bleu marine */
+  transform: scale(1.05); /* Légère animation d'agrandissement au survol */
+}
+
+.cv-button:active {
+  transform: scale(1); /* Retour à la taille initiale lorsqu'on clique */
+}
+
+.about-photo {
+  flex: 1;
+  max-width: 30%; /* Prend la moitié de l'espace disponible */
+  display: flex;
+  height: 650px;
+  justify-content: center;
+  animation: fadeInRight 1.5s ease forwards;
+}
+
+.about-photo img {
+  width: 100%; /* L'image prend toute la largeur du conteneur */
+  height: 90%;
+  border: 4px solid transparent;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+  transition: transform 0.5s ease, border 0.5s ease;
+}
+
+.about-photo img:hover {
+  transform: scale(1.05);
+  border-color: #00bcd4;
+}
+
+/* Animation lettre par lettre */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+
+/* Texte fadeIn en douceur */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.education-section {
+  margin-top: 20px;
+}
+
+.education-section h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.education-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.education-section li {
+  margin-bottom: 10px;
+}
+
+.date {
+  display: block;
+  font-size: 0.9em;
+  color: gray;
+}

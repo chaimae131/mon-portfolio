@@ -1,0 +1,87 @@
+.project-detail {
+  padding: 2rem;
+  color: white;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  margin-bottom: 1rem;
+  animation: fadeInTitle 2s ease forwards;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  color: gray;
+  margin-bottom: 3rem;
+  animation: fadeInText 2s ease forwards;
+}
+
+.project-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.project-section img {
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.project-section p {
+  width: 45%;
+  font-size: 1.1rem;
+  color: gray;
+}
+
+/* Alternance gauche/droite */
+.project-section.left img {
+  order: 1;
+}
+
+.project-section.left p {
+  order: 2;
+  text-align: left;
+}
+
+.project-section.right img {
+  order: 2;
+}
+
+.project-section.right p {
+  order: 1;
+  text-align: right;
+}
+
+/* Animations */
+@keyframes fadeInTitle {
+  from { opacity: 0; transform: translateX(-100px);}
+  to { opacity: 1; transform: translateX(0);}
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(50px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.not-found {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 50px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #00bcd4;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
