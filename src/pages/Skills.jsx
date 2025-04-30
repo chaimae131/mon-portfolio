@@ -65,12 +65,12 @@ const Skills = () => {
       category: "Programming Languages",
       icon: <FaCode className="skill-category-icon" />,
       skills: [
-        { name: "JavaScript", icon: <SiJavascript />, level: 80 },
+        { name: "JavaScript", icon: <SiJavascript />, level: 65 },
         { name: "Shell scripting", icon: <SiGnubash />, level: 70 },
-        { name: "Python", icon: <SiPython />, level: 85 },
+        { name: "Python", icon: <SiPython />, level: 75 },
         { name: "Java", icon: <DiJava />, level: 30 },
-        { name: "C++", icon: <SiCplusplus />, level: 65 },
-        { name: "C", icon: <FaCode />, level: 75 },
+        { name: "C++", icon: <SiCplusplus />, level: 60 },
+        { name: "C", icon: <FaCode />, level: 65 },
         { name: "HTML", icon: <FaHtml5 />, level: 95 },
         { name: "PHP", icon: <FaPhp />, level: 40 },
         { name: "SQL", icon: <FaSql />, level: 55 }
@@ -80,14 +80,14 @@ const Skills = () => {
       category: "Platforms & Frameworks",
       icon: <FaServer className="skill-category-icon" />,
       skills: [
-        { name: "React", icon: <SiReact />, level: 95 },
+        { name: "React", icon: <SiReact />, level: 40 },
         { name: "Django", icon: <SiDjango />, level: 85 },
         { name: "VirtualBox", icon: <SiVirtualbox />, level: 85 },
         { name: "VMware", icon: <SiVmware />, level: 85 },
         { name: "ESXi", icon: <SiVmware />, level: 85 },
         { name: "Proxmox", icon: <SiProxmox />, level: 85 },
-        { name: "TryHackMe", icon: <SiTryhackme />, level: 90 },
-        { name: "LetsDefend", icon: <SiLetsencrypt />, level: 90 }
+        { name: "TryHackMe", icon: <SiTryhackme />, level: 70 },
+        { name: "LetsDefend", icon: <SiLetsencrypt />, level: 50}
       ]
     },
     {
@@ -95,28 +95,28 @@ const Skills = () => {
       icon: <FaTools className="skill-category-icon" />,
       skills: [
         { name: "Splunk", icon: <SiSplunk />, level: 80 },
-        { name: "Ansible", icon: <SiAnsible />, level: 75 },
+        { name: "Ansible", icon: <SiAnsible />, level: 55 },
         { name: "Wireshark", icon: <SiWireshark />, level: 90 },
         { name: "Kali Linux", icon: <SiKalilinux />, level: 90 },
-        { name: "Tsurugi Linux", icon: <FaLinux />, level: 90 }
+        { name: "Tsurugi Linux", icon: <FaLinux />, level: 70 }
       ]
     },
     {
       category: "Network Security",
       icon: <FaCloud className="skill-category-icon" />,
       skills: [
-        { name: "GNS3", icon: <SiReact />, level: 95 },
-        { name: "VLAN", icon: <FaServer />, level: 85 },
-        { name: "DMZ", icon: <FaServer />, level: 85 },
-        { name: "Firewall: pfSense & FortiGate", icon: <FaServer />, level: 85 },
-        { name: "WAF: FortiWeb", icon: <FaServer />, level: 85 }
+        { name: "GNS3", icon: <SiReact />, level: 75 },
+        { name: "VLAN", icon: <FaServer />, level: 75 },
+        { name: "DMZ", icon: <FaServer />, level: 75 },
+        { name: "Firewall: pfSense & FortiGate", icon: <FaServer />, level: 80 },
+        { name: "WAF: FortiWeb", icon: <FaServer />, level: 80 }
       ]
     },
     {
       category: "Cryptography Tools",
       icon: <FaDatabase className="skill-category-icon" />,
       skills: [
-        { name: "OpenSSL", icon: <FaCode />, level: 95 },
+        { name: "OpenSSL", icon: <FaCode />, level: 85 },
         { name: "Hashing algorithms", icon: <SiHashicorp />, level: 85 },
         { name: "Public Key Infrastructure (PKI)", icon: <FaCode />, level: 85 },
         { name: "Digital Signatures", icon: <FaCode />, level: 85 },
