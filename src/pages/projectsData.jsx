@@ -28,6 +28,120 @@ const projectsData = [
         }
       ]
     },
+    {
+      id: "Cloud-SIEM",
+      title: "Cloud-native SIEM (AWS)",
+      images: ["./cloud.jpg"],
+      link: "/projects/Cloud-SIEM",
+      description: "Designed a full SOC stack (TheHive, Cortex, Elasticsearch, MISP) with Docker; integrated threat intelligence and automated incident enrichment.",
+      sections: [
+        {
+          image: "/cloud0.jpg",
+          text: "GuardDuty enabled to monitor EC2 instances for suspicious access attempts, such as unauthorized logins, port scanning, or anomalous API activity, enhancing threat detection and incident response capabilities."
+        },
+        {
+          image: "/cloud1.jpg",
+          text: "The Lambda function restructures GuardDuty findings and forwards them to S3 and TheHive for analysis."
+        },
+        {
+          image: "/cloud2.jpg",
+          text: "EventBridge rule created to trigger the Lambda function upon GuardDuty findings."
+        },
+        {
+          image: "/cloud3.png",
+          text: "SQS queue created to handle asynchronous communication from Lambda to the main instance."
+        },
+       {
+          image: "/cloud4.png",
+          text: "Containers deployed using Docker Compose, enabling modular and scalable services. TheHive is accessible via the instance's public IP on port 9000 for case management and incident tracking."
+        },
+        {
+          image: "/cloud5.png",
+          text: "Cortex is accessible through the instance's public IP on port 9001, providing automated observable analysis and response capabilities."
+        },
+        {
+          image: "/cloud6.png",
+          text: "MISP is accessible via the instance's public IP, allowing centralized storage and sharing of threat intelligence data."
+        },
+        {
+          image: "/cloud8.jpg",
+          text: "Cortex and MISP are fully integrated with TheHive to enable automated case enrichment, analysis, and collaborative threat intelligence workflows."
+        },
+        {
+          image: "/cloud9.png",
+          text: "TheHive manages and tracks security incidents as structured cases with associated tasks and observables."
+        },
+        {
+          image: "/cloud10.png",
+          text: "The VirusTotal analyzer on Cortex enriches observables by querying VirusTotal for threat intelligence data."
+        },
+        {
+          image: "/cloud11.png",
+          text: "The Cloudflare responder on Cortex automates remediation actions such as IP blocking via the Cloudflare API."
+        },
+        {
+          image: "/cloud12.png",
+          text: "MISP stores and correlates observables to facilitate threat sharing and detection of known indicators."
+        },
+        {
+          image: "/cloud7.jpg",
+          text: "Kibana accessible via the instance's public IP to visualize dashboards of TheHive cases."
+        }
+      ]
+    },
+    { 
+      id: "AI-recruitement-app",
+      title: "Intelligent Recruitment Web App",
+      images: ["./ai.png"],
+      link: "/projects/AI-recruitement-app",
+      description: "Built a web application utilising AI to analyze CVs, score candidates, and simulate asynchronous job interviews.",
+      sections: [
+        {
+          image: "/ai1.png",
+          text: "Two user roles are available: 'Candidate' for searching internships or jobs and attending remote interviews, and 'Company' for posting offers and managing recruitment."
+        },
+        {
+          image: "/ai2.png",
+          text: "The company dashboard features a side menu for managing job offers, posting new listings, handling interviews, editing company details, and logging out."
+        },
+        {
+          image: "/ai3.png",
+          text: "Displays all job offers posted by the company."
+        },
+        {
+          image: "/ai4.png",
+          text: "The candidate dashboard features a side menu for browsing job offers, tracking applications, editing profile, and logging out."
+        },
+        {
+          image: "/ai5.png",
+          text: "Candidates can apply to active job offers; their CV is automatically sent to the company, and they can track their application status."
+        },
+        {
+          image: "/ai6.png",
+          text: "Once the application is submitted, a cross-encoder model compares the job offer and CV to predict a matching score."
+        },
+        {
+          image: "/ai7.png",
+          text: "If the score is high, the recruiter updates the application status to 'Interview'."
+        },
+        {
+          image: "/ai8.png",
+          text: "During the asynchronous interview, the candidate records and uploads video responses to displayed questions."
+        },
+        {
+          image: "/ai9.png",
+          text: "→ DeepFace analyzes facial expressions to detect stress and compute a stress score.\n → Celery runs emotion analysis and stress scoring tasks in the background.\n→ Whisper transcribes spoken answers to enable content analysis."
+        },
+        {
+          image: "/ai10.png",
+          text: "Matplotlib generates visual reports showing the evolution of the candidate's emotions across responses."
+        },
+        {
+          image: "/ai11.png",
+          text: "A dedicated dashboard displays emotional trends throughout the interview."
+        }
+      ]
+    },
     { 
       id: "esxi-vcenter",
       title: "Setup of a Virtualized Environment (VMware ESXi + vCenter)",
